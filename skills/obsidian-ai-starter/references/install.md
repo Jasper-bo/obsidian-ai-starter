@@ -18,7 +18,7 @@
 
 ### Linux（补充）
 
-WorkBuddy 宿主是否支持当前发行版先检查；Obsidian 的 AppImage/发行版安装分支见官方安装页。不要将 Windows/macOS 测试结论推广为 Linux 实测。
+先检查当前 Agent 是否能访问目标 Linux 机器；Obsidian 的 AppImage/发行版安装分支见官方安装页。不要将 Windows/macOS 测试结论推广为 Linux 实测。
 
 ## 可选 CLI
 
@@ -28,4 +28,4 @@ WorkBuddy 宿主是否支持当前发行版先检查；Obsidian 的 AppImage/发
 
 先试 `python3 --version`、`python --version` 或 Windows 的 `py -3 --version`，任选确实可用者。脚本只用 Python 标准库，无需 pip。都没有时走 `manual-vault.md`，不必因脚本补装开发环境。
 
-WorkBuddy 的脚本/安装权限受当前模式控制，参考 [默认权限与安全沙箱](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Permission-Modes)。使用当前任务所需权限，不要求切全局完全访问。手机/浏览器会话若不能访问桌面文件，交付明确的桌面续接步骤，不声称已经装软件。
+脚本与安装操作受当前 Agent 的工具权限、运行环境和操作系统规则约束，使用当前任务所需权限。无法执行终端或操作安装器时，给出对应官方页面与具体手动步骤；手机、浏览器或远程会话若不能访问目标桌面，交付明确的桌面续接步骤，不声称已经装软件。

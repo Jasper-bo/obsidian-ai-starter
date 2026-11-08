@@ -4,7 +4,7 @@
 
 | 需求 | 路线 | 主要成本与数据边界 |
 | --- | --- | --- |
-| 先用起来，不另接服务 | 本地 Markdown + WorkBuddy 检索 | 本包默认；资料片段可能发送到宿主云模型，关键词检索不是语义 RAG |
+| 先用起来，不另接服务 | 本地 Markdown + 当前 Agent 检索 | 本包默认；资料片段可能发送到宿主云模型，关键词检索不是语义 RAG |
 | 独立桌面文档问答 | AnythingLLM Desktop | MIT；需配置 LLM、embedding、向量库；分别检查本地/云位置 |
 | 在 Obsidian 里调用 Agent | Copilot | AGPL-3.0；当前 V4 Agent Chat 架构，按新文档配置，不能照搬旧版 Vault QA |
 | 写作时找相似笔记 | Smart Connections | 本地 embedding 的语义关联；当前 source-available 自定义许可证，聊天已拆分 |
@@ -33,4 +33,4 @@
 
 这是两个独立要求。Obsidian 本体 [不是开源软件](https://github.com/obsidianmd/obsidian-releases)，但 [默认本地存储 Markdown](https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data)。免费使用也不等于开源。
 
-用户要求全开源时，说明 [Logseq](https://github.com/logseq/logseq) 与 AnythingLLM 的用途差异，让用户选知识编辑器或文档问答为主，再查该版本存储与导出规则。用户只要求离线时，可保留 Obsidian，选择本地模型路线。在本地工具里断网测试检索问答；当前 WorkBuddy 云会话不参与私密正文推理。尚未通过断网与网络配置核查时，只能交接“本地模型待验证”。
+用户要求全开源时，说明 [Logseq](https://github.com/logseq/logseq) 与 AnythingLLM 的用途差异，让用户选知识编辑器或文档问答为主，再查该版本存储与导出规则。用户只要求离线时，可保留 Obsidian，选择本地模型路线。在本地工具里断网测试检索问答；当前 Agent 若使用云模型，其会话不参与私密正文推理。尚未通过断网与网络配置核查时，只能交接“本地模型待验证”。
